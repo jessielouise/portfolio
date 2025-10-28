@@ -1121,6 +1121,30 @@ input:focus, textarea:focus, select:focus {
     margin: 0 !important;
 }
 
+.social-links {
+    margin-top: 32px !important;
+    text-align: center !important;
+}
+
+.linkedin-link {
+    display: inline-block !important;
+    color: #6c757d !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    padding: 8px 16px !important;
+    border: 1px solid #e9ecef !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    opacity: 0.7 !important;
+}
+
+.linkedin-link:hover {
+    color: #495057 !important;
+    border-color: #dee2e6 !important;
+    opacity: 1 !important;
+    transform: translateY(-1px) !important;
+}
+
 /* Responsive contact layout */
 @media screen and (max-width: 736px) {
     .contact-content {
