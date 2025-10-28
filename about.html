@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>About Me | Jessie Louise Harris</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Learn about Jessie Louise Harris - UI/UX Designer with a passion for user-centered design and creative problem-solving." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			
+			<div class="browser-addressbar">
+					<div class="browser-navigation">
+						<button class="browser-nav-btn" onclick="goBack()" title="Back">◀</button>
+						<button class="browser-nav-btn" onclick="goForward()" title="Forward">▶</button>
+					</div>
+					<div class="browser-url">🔒 jessielouiseharris.portfolio/about</div>
+					<button class="browser-close" onclick="handleBrowserClose()"></button>
+				</div>
+
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">
+								<span class="title">Jessie Louise Harris</span>
+							</a>
+				</div>
+			</header>
+
+			<div id="main">
+						<div class="inner">
+							<header>
+								<h1 class="gradient-text">About Me</h1>
+							</header>
+							
+							<section class="about-content">
+								<div class="about-photo">
+									<img src="images/me.PNG" alt="Jessie Harris" />
+								</div>
+								<div class="about-text">
+									<p>Hi, I am Jessie Harris. I am a UI/UX design student and artist who's passionate about creating digital experiences that feel intuitive and inclusive. I am currently earning my B.S. in Psychology at Old Dominion University, with a Minor in The Impact of Technology and a Certification in Human Factors. I genuinely love exploring where design, psychology, and art meet.</p>
+									
+									<p>As an autistic woman in STEM, I care deeply about accessibility and inclusivity. I really value experiences that are not only aesthetically pleasing, but functional for everyone and also empathetic.</p>
+									
+									<p>Outside of design, I spend my time drawing (which still counts as design, honestly), coding, playing video games, and exploring the internet. I find a lot of inspiration in how people interact and express themselves online. The same goes for art and games! Both inspire how I think about visual storytelling, emotion, and interactivity. I love how creative spaces, digital or traditional, make people feel something.</p>
+								</div>
+							</section>
+
+							<section class="skills-section">
+								<h2>Skills & Tools</h2>
+								<div class="skills-grid">
+									<div class="skill-category">
+										<h3>Technical</h3>
+										<div class="skill-tags">
+											<span class="skill-tag">HTML</span>
+											<span class="skill-tag">CSS</span>
+											<span class="skill-tag">Python (basics)</span>
+											<span class="skill-tag">UX Design Principles</span>
+											<span class="skill-tag">Wireframing & Prototyping</span>
+											<span class="skill-tag">Usability Testing</span>
+											<span class="skill-tag">Adobe Photoshop</span>
+											<span class="skill-tag">Illustrator</span>
+											<span class="skill-tag">Sketch</span>
+											<span class="skill-tag">InVision</span>
+											<span class="skill-tag">Excel</span>
+											<span class="skill-tag">Figma</span>
+											<span class="skill-tag">SPSS</span>
+										</div>
+									</div>
+									<div class="skill-category">
+										<h3>Professional</h3>
+										<div class="skill-tags">
+											<span class="skill-tag">Communication</span>
+											<span class="skill-tag">Collaboration</span>
+											<span class="skill-tag">Human Factors Principles</span>
+											<span class="skill-tag">Research Methods</span>
+											<span class="skill-tag">Experimental Design</span>
+											<span class="skill-tag">Interface Evaluation</span>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<section class="current-projects">
+								<h2>Current Projects</h2>
+								<div class="project-cards">
+									<div class="project-card">
+										<h3>B.S. in Psychology</h3>
+										<p>Finishing my degree at Old Dominion University with a focus on the intersection of psychology and technology design.</p>
+									</div>
+									<div class="project-card">
+										<h3>Google UX Design Certificate</h3>
+										<p>Pursuing the Google UX Design coursera to deepen my practical design skills and industry knowledge.</p>
+									</div>
+								</div>
+							</section>
+						</div>
+			</div>
+
+			<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Jessie Louise Harris. All rights reserved</li>
+							</ul>
+		</div>
+	</footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
+			
+			<script>
+				// Enhanced Browser history simulation with cross-page navigation
+				let browserHistory = [];
+				let currentHistoryIndex = -1;
+				
+				// Initialize history
+				function initBrowserHistory() {
+					const currentPage = window.location.pathname.split('/').pop() || 'about.html';
+					
+					// Load existing history from localStorage
+					const savedHistory = localStorage.getItem('portfolioHistory');
+					const savedIndex = localStorage.getItem('portfolioHistoryIndex');
+					
+					if (savedHistory) {
+						browserHistory = JSON.parse(savedHistory);
+						currentHistoryIndex = parseInt(savedIndex) || 0;
+					}
+					
+					// Only add current page to history if we navigated here via a link (not back/forward)
+					const isBackForwardNavigation = sessionStorage.getItem('browserNavigation');
+					sessionStorage.removeItem('browserNavigation'); // Clear the flag
+					
+					if (!isBackForwardNavigation && (browserHistory.length === 0 || browserHistory[browserHistory.length - 1] !== currentPage)) {
+						// Remove any forward history if we're navigating to a new page
+						if (currentHistoryIndex < browserHistory.length - 1) {
+							browserHistory = browserHistory.slice(0, currentHistoryIndex + 1);
+						}
+						browserHistory.push(currentPage);
+						currentHistoryIndex = browserHistory.length - 1;
+						
+						// Save to localStorage
+						localStorage.setItem('portfolioHistory', JSON.stringify(browserHistory));
+						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
+					}
+					
+					updateNavButtons();
+				}
+				
+				// Update navigation button states
+				function updateNavButtons() {
+					// We'll keep buttons visually the same but handle disabled logic in the click handlers
+					// No visual changes needed - buttons stay consistent
+				}
+				
+				// Navigate back
+				function goBack() {
+					// Check if back navigation is possible
+					if (currentHistoryIndex > 0) {
+						currentHistoryIndex--;
+						const targetPage = browserHistory[currentHistoryIndex];
+						
+						// Save current position
+						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
+						
+						// Set flag to indicate this is a back/forward navigation
+						sessionStorage.setItem('browserNavigation', 'back');
+						
+						// Navigate to the page
+						if (targetPage !== (window.location.pathname.split('/').pop() || 'about.html')) {
+							window.location.href = targetPage;
+						} else {
+							updateNavButtons();
+						}
+					}
+					// If no back history available, do nothing (button still looks clickable)
+				}
+				
+				// Navigate forward
+				function goForward() {
+					// Check if forward navigation is possible
+					if (currentHistoryIndex < browserHistory.length - 1) {
+						currentHistoryIndex++;
+						const targetPage = browserHistory[currentHistoryIndex];
+						
+						// Save current position
+						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
+						
+						// Set flag to indicate this is a back/forward navigation
+						sessionStorage.setItem('browserNavigation', 'forward');
+						
+						// Navigate to the page
+						if (targetPage !== (window.location.pathname.split('/').pop() || 'about.html')) {
+							window.location.href = targetPage;
+						} else {
+							updateNavButtons();
+						}
+					}
+					// If no forward history available, do nothing (button still looks clickable)
+				}
+				
+				function handleBrowserClose() {
+					// Clear navigation history on close
+					localStorage.removeItem('portfolioHistory');
+					localStorage.removeItem('portfolioHistoryIndex');
+					
+					// Fun close animation
+					const wrapper = document.getElementById('wrapper');
+					wrapper.style.transition = 'all 0.5s ease';
+					wrapper.style.transform = 'scale(0.8)';
+					wrapper.style.opacity = '0';
+					
+					setTimeout(() => {
+						// Show fun message
+						document.body.innerHTML = `
+							<div style="
+								position: fixed;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								text-align: center;
+								font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+								color: #495057;
+								background: white;
+								padding: 48px;
+								border-radius: 16px;
+								box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+								border: 1px solid #e9ecef;
+								max-width: 400px;
+							">
+								<h2 style="margin: 0 0 8px 0; color: #212529; font-size: 24px; font-weight: 600;">Leaving Already?</h2>
+								<div style="display: flex; justify-content: center;">
+									<button onclick="location.reload()" style="
+										background: #007bff;
+										color: #ffffff;
+										border: none;
+										padding: 16px 32px;
+										border-radius: 8px;
+										cursor: pointer;
+										font-size: 16px;
+										font-weight: 600;
+										font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+										transition: all 0.2s ease;
+										box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+										min-width: 180px;
+										display: flex;
+										align-items: center;
+										justify-content: center;
+										gap: 8px;
+										text-decoration: none;
+										outline: none;
+									" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0, 123, 255, 0.4)'; this.style.background='#0056b3';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 123, 255, 0.3)'; this.style.background='#007bff';">
+										<span>Reopen Portfolio</span>
+									</button>
+								</div>
+							</div>
+						`;
+					}, 500);
+				}
+				
+				// Initialize when page loads
+				document.addEventListener('DOMContentLoaded', function() {
+					initBrowserHistory();
+				});
+			</script>
+
+	</body>
+</html>

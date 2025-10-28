@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Research & Papers | Jessie Louise Harris</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Academic research, published papers, and data-driven insights by Jessie Louise Harris." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			
+			<div class="browser-addressbar">
+					<div class="browser-navigation">
+						<button class="browser-nav-btn" onclick="goBack()" title="Back">◀</button>
+						<button class="browser-nav-btn" onclick="goForward()" title="Forward">▶</button>
+					</div>
+					<div class="browser-url">🔒 jessielouiseharris.portfolio/research</div>
+					<button class="browser-close" onclick="handleBrowserClose()"></button>
+				</div>
+
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">
+								<span class="title">Jessie Louise Harris</span>
+							</a>
+				</div>
+			</header>
+
+			<div id="main">
+						<div class="inner">
+							<header>
+								<h1 class="gradient-text">Research & Papers</h1>
+								<p>Academic work from my studies in psychology and UX design.</p>
+							</header>
+							
+							<section class="papers-section">
+								<div class="papers-grid">
+									
+									<div class="paper-card">
+										<div class="paper-header">
+											<h3>The Influence of Interactive Digital Environments on Cognitive Performance and Learning Outcomes among Students in Educational Settings</h3>
+											<span class="paper-meta">College Research Paper • 2024</span>
+										</div>
+										<div class="paper-preview">
+											<p class="paper-abstract">This research explores how interactive digital environments impact cognitive performance and learning outcomes in educational settings, examining the relationship between technology integration and student academic success.</p>
+										</div>
+										<div class="paper-actions">
+											<a href="assets/papers/The Influence of Interactive Digital Environments on Cognitive Performance and Learning Outcomes among Students in Educational Setting.pdf" class="download-btn" target="_blank">Download PDF</a>
+										</div>
+									</div>
+
+									<div class="paper-card">
+										<div class="paper-header">
+											<h3>VRChat Application Analysis</h3>
+											<span class="paper-meta">College Research Paper • 2024</span>
+										</div>
+										<div class="paper-preview">
+											<p class="paper-abstract">An in-depth analysis of VRChat as a social platform, examining user interaction patterns, interface design, and the implications for virtual social environments and user experience design.</p>
+										</div>
+										<div class="paper-actions">
+											<a href="assets/papers/VRChat Application Analysis.pdf" class="download-btn" target="_blank">Download PDF</a>
+										</div>
+									</div>
+
+								</div>
+							</section>
+						</div>
+			</div>
+
+			<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Jessie Louise Harris. All rights reserved</li>
+							</ul>
+		</div>
+	</footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
+			
+			<script>
+				// Browser history simulation
+				let browserHistory = [];
+				let currentHistoryIndex = -1;
+				
+				// Initialize history
+				function initBrowserHistory() {
+					const currentPage = window.location.pathname.split('/').pop() || 'research.html';
+					
+					// Load existing history from localStorage
+					const savedHistory = localStorage.getItem('portfolioHistory');
+					const savedIndex = localStorage.getItem('portfolioHistoryIndex');
+					
+					if (savedHistory) {
+						browserHistory = JSON.parse(savedHistory);
+						currentHistoryIndex = parseInt(savedIndex) || 0;
+					}
+					
+					// Only add current page to history if we navigated here via a link (not back/forward)
+					const isBackForwardNavigation = sessionStorage.getItem('browserNavigation');
+					sessionStorage.removeItem('browserNavigation'); // Clear the flag
+					
+					if (!isBackForwardNavigation && (browserHistory.length === 0 || browserHistory[browserHistory.length - 1] !== currentPage)) {
+						// Remove any forward history if we're navigating to a new page
+						if (currentHistoryIndex < browserHistory.length - 1) {
+							browserHistory = browserHistory.slice(0, currentHistoryIndex + 1);
+						}
+						browserHistory.push(currentPage);
+						currentHistoryIndex = browserHistory.length - 1;
+						
+						// Save to localStorage
+						localStorage.setItem('portfolioHistory', JSON.stringify(browserHistory));
+						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
+					}
+					
+					updateNavButtons();
+				}
+				
+				// Update navigation button states
+				function updateNavButtons() {
+					// We'll keep buttons visually the same but handle disabled logic in the click handlers
+					// No visual changes needed - buttons stay consistent
+				}
+				
+				// Navigate back
+				function goBack() {
+					if (currentHistoryIndex > 0) {
+						currentHistoryIndex--;
+						const targetPage = browserHistory[currentHistoryIndex];
+						
+						// Save current position
+						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
+						
+						// Set flag to indicate this is a back/forward navigation
+						sessionStorage.setItem('browserNavigation', 'back');
+						
+						// Navigate to the page
+						if (targetPage !== (window.location.pathname.split('/').pop() || 'research.html')) {
+							window.location.href = targetPage;
+						} else {
+							updateNavButtons();
+						}
+					}
+				}
+				
+				// Navigate forward
+				function goForward() {
+					if (currentHistoryIndex < browserHistory.length - 1) {
+						currentHistoryIndex++;
+						const targetPage = browserHistory[currentHistoryIndex];
+						
+						// Save current position
+						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
+						
+						// Set flag to indicate this is a back/forward navigation
+						sessionStorage.setItem('browserNavigation', 'forward');
+						
+						// Navigate to the page
+						if (targetPage !== (window.location.pathname.split('/').pop() || 'research.html')) {
+							window.location.href = targetPage;
+						} else {
+							updateNavButtons();
+						}
+					}
+				}
+				
+				function handleBrowserClose() {
+					// Clear navigation history on close
+					localStorage.removeItem('portfolioHistory');
+					localStorage.removeItem('portfolioHistoryIndex');
+					// Fun close animation
+					const wrapper = document.getElementById('wrapper');
+					wrapper.style.transition = 'all 0.5s ease';
+					wrapper.style.transform = 'scale(0.8)';
+					wrapper.style.opacity = '0';
+					
+					setTimeout(() => {
+						// Show fun message
+						document.body.innerHTML = `
+							<div style="
+								position: fixed;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								text-align: center;
+								font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+								color: #495057;
+								background: white;
+								padding: 48px;
+								border-radius: 16px;
+								box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+								border: 1px solid #e9ecef;
+								max-width: 400px;
+							">
+								<h2 style="margin: 0 0 8px 0; color: #212529; font-size: 24px; font-weight: 600;">Leaving Already?</h2>
+								<div style="display: flex; justify-content: center;">
+									<button onclick="location.reload()" style="
+										background: #007bff;
+										color: #ffffff;
+										border: none;
+										padding: 16px 32px;
+										border-radius: 8px;
+										cursor: pointer;
+										font-size: 16px;
+										font-weight: 600;
+										font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+										transition: all 0.2s ease;
+										box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+										min-width: 180px;
+										display: flex;
+										align-items: center;
+										justify-content: center;
+										gap: 8px;
+										text-decoration: none;
+										outline: none;
+									" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0, 123, 255, 0.4)'; this.style.background='#0056b3';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 123, 255, 0.3)'; this.style.background='#007bff';">
+										<span>Reopen Portfolio</span>
+									</button>
+								</div>
+							</div>
+						`;
+					}, 500);
+				}
+				
+				// Initialize when page loads
+				document.addEventListener('DOMContentLoaded', function() {
+					initBrowserHistory();
+					initPaperExpansion();
+				});
+
+				// Paper expansion functionality
+				function initPaperExpansion() {
+					const expandBtns = document.querySelectorAll('.expand-btn');
+					expandBtns.forEach(btn => {
+						btn.addEventListener('click', function() {
+							if (this.disabled) return;
+							
+							const paperCard = this.closest('.paper-card');
+							const paperContent = paperCard.querySelector('.paper-content');
+							
+							if (paperContent) {
+								const isExpanded = paperContent.classList.contains('expanded');
+								
+								if (isExpanded) {
+									paperContent.classList.remove('expanded');
+									this.textContent = 'Read More';
+								} else {
+									paperContent.classList.add('expanded');
+									this.textContent = 'Show Less';
+								}
+							}
+						});
+					});
+				}
+			</script>
+
+	</body>
+</html>
