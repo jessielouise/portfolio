@@ -3,6 +3,19 @@
 /* Import browser-appropriate fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=SF+Pro+Display:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
+/* Force light mode and override dark mode */
+* {
+    color-scheme: light !important;
+}
+
+html {
+    color-scheme: light !important;
+}
+
+body {
+    color-scheme: light !important;
+}
+
 /* Browser OS-style background */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
@@ -10,6 +23,7 @@ body {
     min-height: 100vh !important;
     padding: 20px !important;
     margin: 0 !important;
+    color: #495057 !important;
 }
 
 /* Browser Window Frame */
@@ -1128,6 +1142,13 @@ input:focus, textarea:focus, select:focus {
 @media screen and (max-width: 980px) {
     body {
         padding: 10px !important;
+        background: #f5f5f5 !important;
+        color: #495057 !important;
+    }
+    
+    #wrapper {
+        background: #ffffff !important;
+        color: #495057 !important;
     }
     
     .tiles {
@@ -1153,11 +1174,41 @@ input:focus, textarea:focus, select:focus {
         margin: 0 40px !important;
         font-size: 12px !important;
     }
+    
+    /* Force light colors on mobile */
+    * {
+        color-scheme: light !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #212529 !important;
+    }
+    
+    p {
+        color: #495057 !important;
+    }
+    
+    .browser-addressbar {
+        background: #ffffff !important;
+        border-bottom: 1px solid #e9ecef !important;
+    }
+    
+    #header {
+        background: #ffffff !important;
+        border-bottom: 1px solid #e9ecef !important;
+    }
 }
 
 @media screen and (max-width: 736px) {
     body {
         padding: 5px !important;
+        background: #f5f5f5 !important;
+        color: #495057 !important;
+    }
+    
+    #wrapper {
+        background: #ffffff !important;
+        color: #495057 !important;
     }
     
     .tiles {
