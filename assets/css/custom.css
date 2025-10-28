@@ -702,6 +702,73 @@ input:focus, textarea:focus, select:focus {
     margin: 0 !important;
 }
 
+/* Certifications styling */
+.certifications-section {
+    margin-top: 48px !important;
+    padding-top: 32px !important;
+    border-top: 1px solid #e9ecef !important;
+}
+
+.certifications-section h2 {
+    margin-bottom: 24px !important;
+    color: #212529 !important;
+    font-size: 20px !important;
+}
+
+.certification-cards {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 24px !important;
+}
+
+.certification-card {
+    background: #f8f9fa !important;
+    border: 1px solid #e9ecef !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    transition: all 0.2s ease !important;
+}
+
+.certification-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    border-color: #007bff !important;
+}
+
+.certification-card h3 {
+    color: #212529 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+}
+
+.certification-card p {
+    color: #6c757d !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin: 0 0 16px 0 !important;
+}
+
+.cert-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #007bff !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+    background: #e7f3ff !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+}
+
+.cert-link:hover {
+    background: #007bff !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+}
+
 /* Research Page Styling */
 .research-intro {
     margin-bottom: 48px !important;
