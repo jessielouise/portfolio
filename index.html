@@ -88,15 +88,12 @@
 			<script src="assets/js/custom.js"></script>
 			
 			<script>
-				// Enhanced Browser history simulation with cross-page navigation
 				let browserHistory = [];
 				let currentHistoryIndex = -1;
 				
-				// Initialize history
 				function initBrowserHistory() {
 					const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 					
-					// Load existing history from localStorage
 					const savedHistory = localStorage.getItem('portfolioHistory');
 					const savedIndex = localStorage.getItem('portfolioHistoryIndex');
 					
@@ -105,19 +102,16 @@
 						currentHistoryIndex = parseInt(savedIndex) || 0;
 					}
 					
-					// Only add current page to history if we navigated here via a link (not back/forward)
 					const isBackForwardNavigation = sessionStorage.getItem('browserNavigation');
-					sessionStorage.removeItem('browserNavigation'); // Clear the flag
+					sessionStorage.removeItem('browserNavigation');
 					
 					if (!isBackForwardNavigation && (browserHistory.length === 0 || browserHistory[browserHistory.length - 1] !== currentPage)) {
-						// Remove any forward history if we're navigating to a new page
 						if (currentHistoryIndex < browserHistory.length - 1) {
 							browserHistory = browserHistory.slice(0, currentHistoryIndex + 1);
 						}
 						browserHistory.push(currentPage);
 						currentHistoryIndex = browserHistory.length - 1;
 						
-						// Save to localStorage
 						localStorage.setItem('portfolioHistory', JSON.stringify(browserHistory));
 						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
 					}
@@ -125,25 +119,18 @@
 					updateNavButtons();
 				}
 				
-				// Update navigation button states
 				function updateNavButtons() {
-					// We'll keep buttons visually the same but handle disabled logic in the click handlers
-					// No visual changes needed - buttons stay consistent
 				}
 				
-				// Navigate back
 				function goBack() {
 					if (currentHistoryIndex > 0) {
 						currentHistoryIndex--;
 						const targetPage = browserHistory[currentHistoryIndex];
 						
-						// Save current position
 						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
 						
-						// Set flag to indicate this is a back/forward navigation
 						sessionStorage.setItem('browserNavigation', 'back');
 						
-						// Navigate to the page
 						if (targetPage !== (window.location.pathname.split('/').pop() || 'index.html')) {
 							window.location.href = targetPage;
 						} else {
@@ -152,19 +139,15 @@
 					}
 				}
 				
-				// Navigate forward
 				function goForward() {
 					if (currentHistoryIndex < browserHistory.length - 1) {
 						currentHistoryIndex++;
 						const targetPage = browserHistory[currentHistoryIndex];
 						
-						// Save current position
 						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
 						
-						// Set flag to indicate this is a back/forward navigation
 						sessionStorage.setItem('browserNavigation', 'forward');
 						
-						// Navigate to the page
 						if (targetPage !== (window.location.pathname.split('/').pop() || 'index.html')) {
 							window.location.href = targetPage;
 						} else {
@@ -174,18 +157,15 @@
 				}
 				
 				function handleBrowserClose() {
-					// Clear navigation history on close
 					localStorage.removeItem('portfolioHistory');
 					localStorage.removeItem('portfolioHistoryIndex');
 					
-					// Fun close animation
 					const wrapper = document.getElementById('wrapper');
 					wrapper.style.transition = 'all 0.5s ease';
 					wrapper.style.transform = 'scale(0.8)';
 					wrapper.style.opacity = '0';
 					
 					setTimeout(() => {
-						// Show fun message
 						document.body.innerHTML = `
 							<div style="
 								position: fixed;
@@ -232,7 +212,6 @@
 					}, 500);
 				}
 				
-				// Initialize when page loads
 				document.addEventListener('DOMContentLoaded', function() {
 					initBrowserHistory();
 				});
