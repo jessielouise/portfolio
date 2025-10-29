@@ -930,6 +930,85 @@ input:focus, textarea:focus, select:focus {
     }
 }
 
+/* Design Portfolio Page Styling */
+.recent-projects-section {
+    margin: 32px 0 !important;
+    padding-bottom: 32px !important;
+    border-bottom: 1px solid #e9ecef !important;
+}
+
+.recent-projects-section h2 {
+    margin-bottom: 24px !important;
+    color: #212529 !important;
+    font-size: 20px !important;
+}
+
+.project-showcase {
+    background: #f8f9fa !important;
+    border: 1px solid #e9ecef !important;
+    border-radius: 8px !important;
+    padding: 24px !important;
+    transition: all 0.2s ease !important;
+}
+
+.project-showcase:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    border-color: #007bff !important;
+}
+
+.project-showcase h3 {
+    margin-bottom: 16px !important;
+    color: #212529 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+.project-content {
+    display: flex !important;
+    gap: 24px !important;
+    align-items: flex-start !important;
+}
+
+.project-image {
+    flex: 0 0 40% !important;
+}
+
+.project-image img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 6px !important;
+    border: 1px solid #e9ecef !important;
+}
+
+.project-description {
+    flex: 1 !important;
+}
+
+.project-description p {
+    color: #6c757d !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* Mobile responsive for project showcase */
+@media screen and (max-width: 768px) {
+    .project-content {
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+    
+    .project-image {
+        flex: none !important;
+        text-align: center !important;
+    }
+    
+    .project-image img {
+        max-width: 80% !important;
+    }
+}
+
 .early-work-section {
     margin: 32px 0 !important;
     padding-bottom: 32px !important;
