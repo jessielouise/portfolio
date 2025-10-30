@@ -36,32 +36,35 @@
 							</header>
 							
 							<section>
-								<h2>Currently Building</h2>
+								<h2>Always Building</h2>
 								<p>I'm actively developing my design portfolio while completing my Psychology degree and Google UX Design certification.</p>
-								
-								<div class="github-section">
-									<h3>GitHub & Projects</h3>
-									<a href="https://github.com/404incorrect" target="_blank" rel="noopener noreferrer" class="github-link">
-										<span class="github-icon">💻</span>
-										<span class="github-text">
-											<strong>@404incorrect</strong>
-										</span>
-									</a>
-								</div>
 								
 								<div class="recent-projects-section">
 									<h2>Recent Projects</h2>
 									<div class="project-showcase">
 										<h3>RGB LED Controller Design</h3>
 										<div class="project-content">
-											<div class="project-image">
-												<img src="images/ControllerSketch.png" alt="RGB LED Controller Design" />
-											</div>
 											<div class="project-description">
-												<p>Product design for an RGB LED controller with a matching UI interface. Users can customize colors for different controller features like the left stick, buttons, and other components through an intuitive color selection interface.</p>
+												<p><strong>Problem:</strong> RGB LED gamer controller is cool, but it would be cooler if I could pick the colors.</p>
+												<p>Custom RGB LED controller with companion app design. Transforms standard gaming hardware into a personalized experience.</p>
+											</div>
+											<div class="project-images">
+												<img src="images/ControllerSketch.png" alt="RGB LED Controller Hardware Design" onclick="openModal(this)" />
+												<img src="images/figmacontroller.png" alt="RGB LED Controller UI Wireframe" onclick="openModal(this)" />
 											</div>
 										</div>
 									</div>
+								</div>
+								
+								<div class="github-section">
+									<h3>GitHub & Fun Projects</h3>
+									<p> My coding experimental projects, random ideas, and things that made me smile while building them.</p>
+									<a href="https://github.com/404incorrect" target="_blank" rel="noopener noreferrer" class="github-link">
+										<span class="github-icon">💻</span>
+										<span class="github-text">
+											<strong>@404incorrect</strong>
+										</span>
+									</a>
 								</div>
 								
 								<div class="early-work-section">
@@ -224,7 +227,35 @@
 				document.addEventListener('DOMContentLoaded', function() {
 					initBrowserHistory();
 				});
+				
+				// Image modal functionality
+				function openModal(img) {
+					const modal = document.getElementById('imageModal');
+					const modalImg = document.getElementById('modalImage');
+					modal.classList.add('active');
+					modalImg.src = img.src;
+					modalImg.alt = img.alt;
+				}
+				
+				function closeModal() {
+					const modal = document.getElementById('imageModal');
+					modal.classList.remove('active');
+				}
+				
+				// Close modal when clicking outside the image
+				document.addEventListener('click', function(e) {
+					const modal = document.getElementById('imageModal');
+					if (e.target === modal) {
+						closeModal();
+					}
+				});
 			</script>
+			
+			<!-- Image Modal -->
+			<div id="imageModal" class="image-modal">
+				<span class="close-modal" onclick="closeModal()">&times;</span>
+				<img class="modal-content" id="modalImage">
+			</div>
 
 	</body>
 </html>
