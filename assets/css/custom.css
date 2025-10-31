@@ -340,6 +340,12 @@ h2 {
     margin-bottom: 12px !important;
 }
 
+.section-heading {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 p {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-weight: 400 !important;
@@ -1121,20 +1127,38 @@ input:focus, textarea:focus, select:focus {
     .project-images {
         flex: none !important;
         text-align: center !important;
+        width: 100% !important;
     }
     
     .project-images {
         flex-direction: column !important;
         gap: 12px !important;
+        max-height: none !important;
     }
     
     .project-image img {
-        max-width: 80% !important;
+        width: 80% !important;
+        max-width: 300px !important;
+        height: auto !important;
     }
     
     .project-images img {
-        width: 70% !important;
-        max-width: none !important;
+        width: 80% !important;
+        max-width: 300px !important;
+        height: auto !important;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+    .project-images {
+        gap: 8px !important;
+    }
+    
+    .project-image img,
+    .project-images img {
+        width: 90% !important;
+        max-width: 250px !important;
     }
 }
 
