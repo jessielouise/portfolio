@@ -358,6 +358,17 @@ p {
     font-weight: 700 !important;
 }
 
+.subtitle-text {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-size: 1.5em !important;
+    font-weight: 700 !important;
+    margin-top: -10px !important;
+    margin-bottom: 2em !important;
+}
+
 /* Logo styled like browser favicon/title */
 .logo {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
