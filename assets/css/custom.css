@@ -955,6 +955,8 @@ input:focus, textarea:focus, select:focus {
     transform: translateY(-2px) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
     border-color: #007bff !important;
+    z-index: 10 !important;
+    position: relative !important;
 }
 
 .project-showcase h3 {
@@ -962,6 +964,23 @@ input:focus, textarea:focus, select:focus {
     color: #212529 !important;
     font-size: 18px !important;
     font-weight: 600 !important;
+}
+
+/* Connected project cards styling */
+.recent-projects-section .project-showcase:first-of-type {
+    border-radius: 8px 8px 0 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.recent-projects-section .project-showcase:nth-of-type(2) {
+    border-radius: 0 0 8px 8px !important;
+    border-top: none !important;
+    margin-top: 0 !important;
+}
+
+/* When second card is hovered, add the shared border back */
+.recent-projects-section .project-showcase:nth-of-type(2):hover {
+    border-top: 1px solid #007bff !important;
 }
 
 .project-content {
