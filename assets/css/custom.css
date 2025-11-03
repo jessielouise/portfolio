@@ -971,7 +971,14 @@ input:focus, textarea:focus, select:focus {
 .project-showcase:hover {
     transform: translateY(-2px) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-    border-color: #007bff !important;
+    z-index: 10 !important;
+    position: relative !important;
+}
+
+/* Special hover effects for connected cards */
+.recent-projects-section .project-showcase:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
     z-index: 10 !important;
     position: relative !important;
 }
@@ -984,20 +991,23 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Connected project cards styling */
-.recent-projects-section .project-showcase:first-of-type {
+.recent-projects-section .project-showcase.project-showcase:first-of-type {
     border-radius: 8px 8px 0 0 !important;
     margin-bottom: 0 !important;
+    border-top: 1px solid #e9ecef !important;
 }
 
-.recent-projects-section .project-showcase:nth-of-type(2) {
-    border-radius: 0 0 8px 8px !important;
+.recent-projects-section .project-showcase.project-showcase:not(:first-child):not(:last-child) {
+    border-radius: 0 !important;
     border-top: none !important;
+    margin-bottom: 0 !important;
     margin-top: 0 !important;
 }
 
-/* When second card is hovered, add the shared border back */
-.recent-projects-section .project-showcase:nth-of-type(2):hover {
-    border-top: 1px solid #007bff !important;
+.recent-projects-section .project-showcase.project-showcase:last-of-type {
+    border-radius: 0 0 8px 8px !important;
+    border-top: none !important;
+    margin-top: 0 !important;
 }
 
 .project-content {
