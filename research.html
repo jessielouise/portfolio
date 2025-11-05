@@ -26,19 +26,6 @@
 					<a href="index.html" class="logo">
 								<span class="title">Jessie Louise Harris</span>
 							</a>
-					<nav class="hamburger-nav">
-						<button class="hamburger-menu" onclick="toggleMenu()">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
-						<div class="nav-menu" id="navMenu">
-							<a href="index.html">Home</a>
-							<a href="about.html">About</a>
-							<a href="design.html">Design</a>
-							<a href="research.html" class="active">Research</a>
-						</div>
-					</nav>
 				</div>
 			</header>
 
@@ -58,7 +45,7 @@
 											<span class="paper-meta">College Research Paper • 2025</span>
 										</div>
 										<div class="paper-preview">
-											<p class="paper-abstract">This research examines the critical role of ethical considerations in UX design, exploring how moral principles and user welfare impact design decisions, accessibility, privacy, and the overall user experience in digital products.</p>
+											<p class="paper-abstract">This research is on the role of ethical considerations in UX design, exploring user impact through design decisions, accessibility,and the overall user experience in digital products.</p>
 										</div>
 										<div class="paper-actions">
 											<a href="assets/papers/How Ethical Considerations Shape UX Design.pdf" class="download-btn" target="_blank">Download PDF</a>
@@ -265,25 +252,6 @@
 						});
 					});
 				}
-
-				function toggleMenu() {
-					const navMenu = document.getElementById('navMenu');
-					const hamburger = document.querySelector('.hamburger-menu');
-					
-					navMenu.classList.toggle('active');
-					hamburger.classList.toggle('active');
-				}
-
-				// Close menu when clicking outside
-				document.addEventListener('click', function(event) {
-					const navMenu = document.getElementById('navMenu');
-					const hamburger = document.querySelector('.hamburger-menu');
-					
-					if (!event.target.closest('.hamburger-nav')) {
-						navMenu.classList.remove('active');
-						hamburger.classList.remove('active');
-					}
-				});
 			</script>
 
 	</body>
