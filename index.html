@@ -1,220 +1,305 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Jessie Louise Harris</title>
+		<title>Jessie Harris | UX/UI Designer & Artist</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/portfolio.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-		<div id="wrapper">
-				
-			<div class="browser-addressbar">
-					<div class="browser-navigation">
-						<button class="browser-nav-btn" onclick="goBack()" title="Back">◀</button>
-						<button class="browser-nav-btn" onclick="goForward()" title="Forward">▶</button>
-					</div>
-					<div class="browser-url">🔒 jessielouiseharris.portfolio/home</div>
-					<button class="browser-close" onclick="handleBrowserClose()"></button>
-				</div>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="logo">
-								<span class="title">Jessie Louise Harris</span>
-							</a>
-				</div>
-			</header>
-
-			<div id="main">
+				<!-- Header -->
+					<header id="header">
 						<div class="inner">
-							<header>
-								<h1 class="gradient-text">Hi, I'm Jessie Louise Harris</h1>
-								<p class="subtitle-text">UI/UX & Visual Designer</p>
-							</header>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<a href="design.html">
-										<h2>Design Portfolio</h2>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<a href="about.html">
-										<h2>About Me</h2>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<a href="research.html">
-										<h2>Research & Papers</h2>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<a href="contact.html">
-										<h2>Contact</h2>
-									</a>
-								</article>
-							</section>
-			</div>
-		</div>
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="title">Jessie Harris</span>
+								</a>
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#design">Case Studies</a></li>
+										<li><a href="#about">About</a></li>
+										<li><a href="#research">Research</a></li>
+										<li><a href="#art">Art</a></li>
+										<li><a href="#contact">Contact</a></li>
+									</ul>
+								</nav>
+						</div>
+					</header>
 
-		<footer id="footer">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<!-- Hero Section -->
+							<header class="hero">
+								<h1 class="gradient-text">UI/UX Designer & Artist</h1>
+								<p>Creating user-centered experiences through thoughtful design, psychology, and artistic perspective. Front-end development skills combined with UX expertise. Currently earning my B.S. in Psychology at Old Dominion University with a focus on human factors and accessibility.</p>
+							</header>
+
+							<!-- Case Studies Section -->
+							<section id="design" class="section">
+								<h2>Case Studies</h2>
+								<p>Creating user-centered experiences through thoughtful design and prototyping. Currently advancing my skills through college and a Google UX Design certification while developing my portfolio.</p>
+								
+								<div class="projects-grid">
+									
+									<!-- YouTube Analytics Project -->
+									<div class="project-card">
+										<div class="project-image">
+											<img src="images/Youtube_Analytics_Mobile_UI.png" alt="YouTube Analytics Mobile UI Design" onclick="openModal(this)" />
+										</div>
+										<div class="project-content">
+											<h3><a href="youtube-analytics.html">YouTube Analytics Mobile UI</a></h3>
+											<p>A mobile interface redesign focused on making analytics data more accessible and actionable for content creators on-the-go.</p>
+											<div class="project-tags">
+												<span class="tag">Mobile Design</span>
+												<span class="tag">Data Visualization</span>
+												<span class="tag">User Interface</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- Crosswalk Light Project -->
+									<div class="project-card">
+										<div class="project-image">
+											<img src="images/crosswalklight.png" alt="Crosswalk Light Redesign" onclick="openModal(this)" />
+										</div>
+										<div class="project-content">
+											<h3><a href="crosswalk-light.html">Crosswalk Light Redesign</a></h3>
+											<p>A user-centered redesign of crosswalk signals focused on improving accessibility and clarity for all pedestrians, including those with visual or cognitive impairments.</p>
+											<div class="project-tags">
+												<span class="tag">Accessibility Design</span>
+												<span class="tag">Public Safety</span>
+												<span class="tag">Universal Design</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- LED Gaming Controller -->
+									<div class="project-card">
+										<div class="project-image">
+											<img src="images/pic11.jpg" alt="LED Gaming Controller" onclick="openModal(this)" />
+										</div>
+										<div class="project-content">
+											<h3><a href="game-controller.html">LED Gaming Controller</a></h3>
+											<p>A gaming controller with dynamic LED lighting that responds to gameplay events and creates immersive visual experiences beyond the screen.</p>
+											<div class="project-tags">
+												<span class="tag">Product Design</span>
+												<span class="tag">LED Technology</span>
+												<span class="tag">Interactive Lighting</span>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</section>
+
+							<!-- About Section -->
+							<section id="about" class="section">
+								<h2>About Me</h2>
+								<div class="about-content">
+									<div class="about-photo">
+										<img src="images/me.PNG" alt="Jessie Harris" />
+									</div>
+									<div class="about-text">
+										<p>Hi, I am Jessie Harris. I am a UI/UX design student and artist. I am currently earning my B.S. in Psychology at Old Dominion University, with a Minor in The Impact of Technology and a Certification in Human Factors. I will be graduating in spring of 2026! I love exploring where design, psychology, and art meet.</p>
+										
+										<p> I care deeply about accessibility and inclusivity. I really value experiences that are not only aesthetically pleasing, but functional for everyone and also empathetic.</p>
+										
+									<p>Outside of design, I spend my time drawing, coding, playing video games, and exploring the internet. I find a lot of inspiration in how people interact and express themselves online.</p>
+								</div>
+							</div>
+							
+							<!-- Education & Experience -->
+							<div class="education-section">
+								<h3>Education & Experience</h3>
+								<div class="education-grid">
+									<div class="education-item">
+										<h4>Bachelor of Science in Psychology</h4>
+										<p class="education-details">Old Dominion University • In Progress</p>
+										<p class="education-description">Specializing in human factors and cognitive psychology with a focus on how people interact with technology. Relevant coursework includes research methods, statistics, cognitive psychology, and human-computer interaction principles.</p>
+										<ul class="education-highlights">
+											<li>Minor in The Impact of Technology</li>
+											<li>Certification in Human Factors</li>
+											<li>Dean's List recognition</li>
+										</ul>
+									</div>
+									
+									<div class="education-item">
+										<h4>Front-End Development Experience</h4>
+										<p class="education-details">Self-Taught & Project-Based Learning</p>
+										<p class="education-description">Developed proficiency in modern web technologies through hands-on projects and continuous learning. Built responsive websites (like this one!), interactive portfolios, and user interface components.</p>
+										<ul class="education-highlights">
+											<li>HTML5 & CSS3 with modern layout techniques (Flexbox, Grid)</li>
+											<li>JavaScript for interactive user experiences</li>
+											<li>Responsive design and mobile-first development</li>
+											<li>Git version control and GitHub Pages deployment</li>
+											<li>Accessibility best practices and WCAG compliance</li>
+										</ul>
+									</div>
+								</div>
+							</div>								<!-- Skills -->
+								<div class="skills-section">
+									<h3>Skills & Tools</h3>
+									<div class="skills-grid">
+										<div class="skill-category">
+											<h4>Technical</h4>
+											<div class="skill-tags">
+												<span class="skill-tag">HTML</span>
+												<span class="skill-tag">CSS</span>
+												<span class="skill-tag">Python (basics)</span>
+												<span class="skill-tag">UX Design Principles</span>
+												<span class="skill-tag">Accessibility</span>
+												<span class="skill-tag">User Research</span>
+											</div>
+										</div>
+										<div class="skill-category">
+											<h4>Design</h4>
+											<div class="skill-tags">
+												<span class="skill-tag">Figma</span>
+												<span class="skill-tag">Adobe Creative Suite</span>
+												<span class="skill-tag">Wireframing</span>
+												<span class="skill-tag">Prototyping</span>
+												<span class="skill-tag">Visual Design</span>
+												<span class="skill-tag">Digital Art</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Certifications -->
+								<div class="certifications-section">
+									<h3>Certifications</h3>
+									<div class="cert-grid">
+										<div class="cert-card">
+											<h4>Google UX Design Certificate</h4>
+											<p>Professional Certificate Program</p>
+											<ul>
+												<li>Course 1: Foundations of User Experience (UX) Design</li>
+												<li>Course 2: Start the UX Design Process: Empathize, Define, and Ideate</li>
+												<li>Course 3: Build Wireframes and Low-Fidelity Prototypes</li>
+												<li>Course 4: Conduct UX Research and Test Early Concepts</li>
+												<li>Course 5: Create High-Fidelity Designs and Prototypes in Figma</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<!-- Research Section -->
+							<section id="research" class="section">
+								<h2>Research & Papers</h2>
+								<p>Academic work from my studies in psychology and UX design.</p>
+								
+								<div class="papers-grid">
+									<div class="paper-card">
+										<h3>How Ethical Considerations Shape UX Design</h3>
+										<p class="paper-meta">College Research Paper • 2025</p>
+										<p>An exploration of ethical frameworks in user experience design, examining how moral considerations influence design decisions and user outcomes.</p>
+										<a href="research.html" class="paper-link">Read Full Paper →</a>
+									</div>
+								</div>
+							</section>
+
+							<!-- Art Section -->
+							<section id="art" class="section">
+								<h2>Artistic Work</h2>
+								<p>During a multi-month intensive tattoo apprenticeship, I developed my artistic skills, color theory, and layout. While I ultimately decided that my passion for tech was more fulfilling, this experience deepened my appreciation for visual design.</p>
+								
+								<div class="art-preview">
+									<div class="art-samples">
+										<img src="images/art11.jpeg" alt="Tattoo Flash Art" />
+										<img src="images/art10.jpeg" alt="Tattoo Flash Art" />
+										<img src="images/art9.jpeg" alt="Tattoo Flash Art" />
+									</div>
+									<div class="art-link-container">
+										<a href="art.html" class="art-gallery-link">View Full Art Gallery →</a>
+									</div>
+								</div>
+							</section>
+
+							<!-- Contact Section -->
+							<section id="contact" class="section">
+								<h2>Get In Touch</h2>
+								<p>I'm always interested in new opportunities and collaborations. Let's connect!</p>
+								
+								<div class="contact-info-grid">
+									<div class="contact-primary">
+										<h3>Contact Information</h3>
+										<div class="contact-item">
+											<strong>Email:</strong> 
+											<a href="mailto:jessielouiseharris@proton.me">jessielouiseharris@proton.me</a>
+										</div>
+										<div class="contact-item">
+											<strong>Location:</strong> 
+											<span>Washington DC Area</span>
+										</div>
+									</div>
+									
+									<div class="social-links">
+										<h3>Connect With Me</h3>
+										<ul class="contact-links">
+											<li><a href="https://www.linkedin.com/in/j3ss1eharr1s/" target="_blank">LinkedIn</a></li>
+											<li><a href="https://github.com/404incorrect" target="_blank">GitHub</a></li>
+										</ul>
+									</div>
+								</div>
+							</section>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
 						<div class="inner">
 							<ul class="copyright">
-								<li>&copy; Jessie Louise Harris. All rights reserved</li>
+								<li>&copy; 2025 Jessie Harris. All rights reserved</li>
 							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Image Modal -->
+		<div id="imageModal" class="modal" onclick="closeModal()">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="modalImage">
 		</div>
-	</footer>
 
-</div>
-
-<script src="assets/js/jquery.min.js"></script>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/custom.js"></script>
 			
 			<script>
-				let browserHistory = [];
-				let currentHistoryIndex = -1;
-				
-				function initBrowserHistory() {
-					const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-					
-					const savedHistory = localStorage.getItem('portfolioHistory');
-					const savedIndex = localStorage.getItem('portfolioHistoryIndex');
-					
-					if (savedHistory) {
-						browserHistory = JSON.parse(savedHistory);
-						currentHistoryIndex = parseInt(savedIndex) || 0;
-					}
-					
-					const isBackForwardNavigation = sessionStorage.getItem('browserNavigation');
-					sessionStorage.removeItem('browserNavigation');
-					
-					if (!isBackForwardNavigation && (browserHistory.length === 0 || browserHistory[browserHistory.length - 1] !== currentPage)) {
-						if (currentHistoryIndex < browserHistory.length - 1) {
-							browserHistory = browserHistory.slice(0, currentHistoryIndex + 1);
-						}
-						browserHistory.push(currentPage);
-						currentHistoryIndex = browserHistory.length - 1;
-						
-						localStorage.setItem('portfolioHistory', JSON.stringify(browserHistory));
-						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
-					}
-					
-					updateNavButtons();
+				// Image modal functionality
+				function openModal(img) {
+					var modal = document.getElementById("imageModal");
+					var modalImg = document.getElementById("modalImage");
+					modal.style.display = "block";
+					modalImg.src = img.src;
 				}
-				
-				function updateNavButtons() {
+
+				function closeModal() {
+					document.getElementById("imageModal").style.display = "none";
 				}
-				
-				function goBack() {
-					if (currentHistoryIndex > 0) {
-						currentHistoryIndex--;
-						const targetPage = browserHistory[currentHistoryIndex];
-						
-						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
-						
-						sessionStorage.setItem('browserNavigation', 'back');
-						
-						if (targetPage !== (window.location.pathname.split('/').pop() || 'index.html')) {
-							window.location.href = targetPage;
-						} else {
-							updateNavButtons();
-						}
-					}
-				}
-				
-				function goForward() {
-					if (currentHistoryIndex < browserHistory.length - 1) {
-						currentHistoryIndex++;
-						const targetPage = browserHistory[currentHistoryIndex];
-						
-						localStorage.setItem('portfolioHistoryIndex', currentHistoryIndex.toString());
-						
-						sessionStorage.setItem('browserNavigation', 'forward');
-						
-						if (targetPage !== (window.location.pathname.split('/').pop() || 'index.html')) {
-							window.location.href = targetPage;
-						} else {
-							updateNavButtons();
-						}
-					}
-				}
-				
-				function handleBrowserClose() {
-					localStorage.removeItem('portfolioHistory');
-					localStorage.removeItem('portfolioHistoryIndex');
-					
-					const wrapper = document.getElementById('wrapper');
-					wrapper.style.transition = 'all 0.5s ease';
-					wrapper.style.transform = 'scale(0.8)';
-					wrapper.style.opacity = '0';
-					
-					setTimeout(() => {
-						document.body.innerHTML = `
-							<div style="
-								position: fixed;
-								top: 50%;
-								left: 50%;
-								transform: translate(-50%, -50%);
-								text-align: center;
-								font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-								color: #495057;
-								background: white;
-								padding: 48px;
-								border-radius: 16px;
-								box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-								border: 1px solid #e9ecef;
-								max-width: 400px;
-							">
-								<h2 style="margin: 0 0 8px 0; color: #212529; font-size: 24px; font-weight: 600;">Leaving Already?</h2>
-								<div style="display: flex; justify-content: center;">
-									<button onclick="location.reload()" style="
-										background: #007bff;
-										color: #ffffff;
-										border: none;
-										padding: 16px 32px;
-										border-radius: 8px;
-										cursor: pointer;
-										font-size: 16px;
-										font-weight: 600;
-										font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-										transition: all 0.2s ease;
-										box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-										min-width: 180px;
-										display: flex;
-										align-items: center;
-										justify-content: center;
-										gap: 8px;
-										text-decoration: none;
-										outline: none;
-									" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0, 123, 255, 0.4)'; this.style.background='#0056b3'; this.style.color='#ffffff';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 123, 255, 0.3)'; this.style.background='#007bff'; this.style.color='#ffffff';">
-										<span>Reopen Portfolio</span>
-									</button>
-								</div>
-							</div>
-						`;
-					}, 500);
-				}
-				
-				document.addEventListener('DOMContentLoaded', function() {
-					initBrowserHistory();
+
+				// Smooth scrolling for navigation
+				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+					anchor.addEventListener('click', function (e) {
+						e.preventDefault();
+						document.querySelector(this.getAttribute('href')).scrollIntoView({
+							behavior: 'smooth'
+						});
+					});
 				});
 			</script>
 
