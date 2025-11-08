@@ -981,3 +981,14 @@ header nav a:hover {
     color: #bbb;
     text-decoration: none;
 }
+
+/* Problem illustration styling */
+.problem-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
