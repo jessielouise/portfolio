@@ -1,12 +1,53 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Jessie Harris | UX/UI Designer & Artist</title>
+		<title>Jessie Harris | UX/UI Visual Designer & Artist</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/portfolio.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Position name on left, nav on right -->
+		<style>
+			#header {
+				padding-top: 1em !important;
+			}
+			#header .inner {
+				display: flex !important;
+				justify-content: space-between !important;
+				align-items: center !important;
+				padding: 0.5em 0 !important;
+			}
+			#header .logo { 
+				display: block !important; 
+				margin: 0 !important;
+				transition: color 0.2s ease !important;
+			}
+			#header .logo:hover {
+				color: #f2849e !important;
+			}
+			#header .title { 
+				font-size: 1.6em !important; 
+				color: #585858 !important; 
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				font-weight: 600 !important; 
+				display: block !important; 
+				text-transform: uppercase !important;
+				letter-spacing: 0.1em !important;
+				transition: color 0.2s ease !important;
+			}
+			#header .logo:hover .title {
+				color: #f2849e !important;
+			}
+			#header nav {
+				margin: 0 !important;
+			}
+			#header nav ul {
+				margin: 0 !important;
+				justify-content: flex-end !important;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -29,6 +70,11 @@
 										<li><a href="#contact">Contact</a></li>
 									</ul>
 								</nav>
+						</div>
+						
+						<!-- Robot Image -->
+						<div class="robot-container">
+							<img src="images/robot.gif" alt="Cute robot waving" class="robot-image" />
 						</div>
 					</header>
 

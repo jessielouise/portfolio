@@ -507,24 +507,60 @@ html {
     text-decoration: none;
 }
 
-/* Navigation updates */
+/* Navigation updates - Centered nav */
+#header .inner {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 20px 0 !important;
+}
+
+#header nav {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Clean navigation styling */
 header nav ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex !important;
+    gap: 30px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-content: center !important;
+}
+
+header nav ul li {
+    display: inline-block !important;
+    margin: 0 !important;
 }
 
 header nav a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: color 0.2s ease !important;
+    display: inline-block !important;
 }
 
 header nav a:hover {
-    color: #667eea;
+    color: #667eea !important;
+}
+
+/* Name styling */
+.name-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.main-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Responsive Design */
@@ -569,10 +605,17 @@ header nav a:hover {
         gap: 15px;
     }
     
-    header nav ul {
+    header .inner {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
         text-align: center;
+    }
+    
+    header nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 }
 
@@ -991,4 +1034,35 @@ header nav a:hover {
     margin: 0 auto 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Robot image styling */
+.robot-container {
+    text-align: center;
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 100%;
+}
+
+.robot-image {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Clean header styling */
+#header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Override main section spacing for robot */
+#main {
+    margin-top: 0 !important;
+    padding-top: 220px !important;
 }
