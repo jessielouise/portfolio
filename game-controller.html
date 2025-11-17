@@ -7,6 +7,47 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/portfolio.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Header styling to match index page -->
+		<style>
+			#header {
+				padding-top: 1em !important;
+			}
+			#header .inner {
+				display: flex !important;
+				justify-content: space-between !important;
+				align-items: center !important;
+				padding: 0.5em 0 !important;
+			}
+			#header .logo { 
+				display: block !important; 
+				margin: 0 !important;
+				transition: color 0.2s ease !important;
+			}
+			#header .logo:hover {
+				color: #f2849e !important;
+			}
+			#header .title { 
+				font-size: 1.6em !important; 
+				color: #585858 !important; 
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				font-weight: 600 !important; 
+				display: block !important; 
+				text-transform: uppercase !important;
+				letter-spacing: 0.1em !important;
+				transition: color 0.2s ease !important;
+			}
+			#header .logo:hover .title {
+				color: #f2849e !important;
+			}
+			#header nav {
+				margin: 0 !important;
+			}
+			#header nav ul {
+				margin: 0 !important;
+				justify-content: flex-end !important;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -251,12 +292,19 @@
 				function openModal(img) {
 					var modal = document.getElementById("imageModal");
 					var modalImg = document.getElementById("modalImage");
-					modal.style.display = "block";
+					
+					// Preload the image to prevent flashing
 					modalImg.src = img.src;
+					modalImg.onload = function() {
+						document.body.classList.add("modal-open");
+						modal.classList.add("show");
+					};
 				}
 
 				function closeModal() {
-					document.getElementById("imageModal").style.display = "none";
+					var modal = document.getElementById("imageModal");
+					modal.classList.remove("show");
+					document.body.classList.remove("modal-open");
 				}
 			</script>
 

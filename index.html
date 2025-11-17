@@ -49,7 +49,7 @@
 			}
 		</style>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload home-page">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -95,10 +95,27 @@
 								
 								<div class="projects-grid">
 									
+									<!-- Gentle Browse Chrome Extension -->
+									<a href="gentle-browse.html" class="project-card">
+										<div class="project-image">
+											<img src="images/gentlebrowsepreview.png?v=2" alt="Gentle Browse Chrome Extension" />
+										</div>
+										<div class="project-content">
+											<h3>Gentle Browse Chrome Extension</h3>
+											<p>A fully functional Chrome extension I coded from scratch to provide sensory relief for users with autism, migraines, and sensory processing issues. Features accessibility-focused design.</p>
+											<div class="project-tags">
+												<span class="tag">Full-Stack Development</span>
+												<span class="tag">JavaScript</span>
+												<span class="tag">Accessibility</span>
+												<span class="tag">Chrome Extension</span>
+											</div>
+										</div>
+									</a>
+									
 									<!-- Crosswalk Light Project -->
 									<a href="crosswalk-light.html" class="project-card">
 										<div class="project-image">
-											<img src="images/crosswalklight.png" alt="Crosswalk Light Redesign" onclick="openModal(this)" />
+											<img src="images/crosswalklight.png" alt="Crosswalk Light Redesign" />
 										</div>
 										<div class="project-content">
 											<h3>Crosswalk Light Redesign</h3>
@@ -114,7 +131,7 @@
 									<!-- YouTube Analytics Project -->
 									<a href="youtube-analytics.html" class="project-card">
 										<div class="project-image">
-											<img src="images/Youtube_Analytics_Mobile_UI.png" alt="YouTube Analytics Mobile UI Design" onclick="openModal(this)" />
+											<img src="images/Youtube_Analytics_Mobile_UI.png" alt="YouTube Analytics Mobile UI Design" />
 										</div>
 										<div class="project-content">
 											<h3>YouTube Analytics Mobile UI</h3>
@@ -130,7 +147,7 @@
 									<!-- Game Controller Redesign -->
 									<a href="game-controller.html" class="project-card">
 										<div class="project-image">
-											<img src="images/ControllerSketch.png" alt="Game Controller Redesign" onclick="openModal(this)" />
+											<img src="images/ControllerSketch.png" alt="Game Controller Redesign" />
 										</div>
 										<div class="project-content">
 											<h3>Game Controller Redesign</h3>
@@ -330,12 +347,19 @@
 				function openModal(img) {
 					var modal = document.getElementById("imageModal");
 					var modalImg = document.getElementById("modalImage");
-					modal.style.display = "block";
+					
+					// Preload the image to prevent flashing
 					modalImg.src = img.src;
+					modalImg.onload = function() {
+						document.body.classList.add("modal-open");
+						modal.classList.add("show");
+					};
 				}
 
 				function closeModal() {
-					document.getElementById("imageModal").style.display = "none";
+					var modal = document.getElementById("imageModal");
+					modal.classList.remove("show");
+					document.body.classList.remove("modal-open");
 				}
 
 				// Smooth scrolling for navigation

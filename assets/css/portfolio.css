@@ -469,26 +469,40 @@ html {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.9);
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+body.modal-open #header {
+    display: none !important;
+}
+
+.modal, .modal *, .modal-content {
+    transition: none !important;
+    animation: none !important;
 }
 
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 900px;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     object-fit: contain;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    transition: none !important;
+    animation: none !important;
+    opacity: 1;
+    visibility: visible;
 }
 
 .close {
@@ -499,6 +513,7 @@ html {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 10000;
 }
 
 .close:hover,
@@ -686,11 +701,16 @@ header nav a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    opacity: 1;
+    display: block;
+    margin: 0 auto;
+    transition: none !important;
+    animation: none !important;
 }
 
 .hero-image img:hover {
-    transform: scale(1.02);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    transition: none !important;
 }
 
 .project-section {
@@ -1061,8 +1081,20 @@ header nav a:hover {
     padding-bottom: 0 !important;
 }
 
-/* Override main section spacing for robot */
-#main {
+/* Override main section spacing for robot on index page only */
+.home-page #main {
     margin-top: 0 !important;
     padding-top: 220px !important;
+}
+
+/* Normal spacing for all other pages */
+body:not(.home-page) #main {
+    margin-top: 0 !important;
+    padding-top: 2em !important;
+}
+
+/* Case study pages get normal header positioning */
+body:not(.home-page) .project-header {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }

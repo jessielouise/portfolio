@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gentle Browse Chrome Extension | Jessie Harris</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/portfolio.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Header styling to match index page -->
+		<style>
+			#header {
+				padding-top: 1em !important;
+			}
+			#header .inner {
+				display: flex !important;
+				justify-content: space-between !important;
+				align-items: center !important;
+				padding: 0.5em 0 !important;
+			}
+			#header .logo { 
+				display: block !important; 
+				margin: 0 !important;
+				transition: color 0.2s ease !important;
+			}
+			#header .logo:hover {
+				color: #f2849e !important;
+			}
+			#header .title { 
+				font-size: 1.6em !important; 
+				color: #585858 !important; 
+				font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+				font-weight: 600 !important; 
+				display: block !important; 
+				text-transform: uppercase !important;
+				letter-spacing: 0.1em !important;
+				transition: color 0.2s ease !important;
+			}
+			#header .logo:hover .title {
+				color: #f2849e !important;
+			}
+			#header nav {
+				margin: 0 !important;
+			}
+			#header nav ul {
+				margin: 0 !important;
+				justify-content: flex-end !important;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="title">Jessie Harris</span>
+								</a>
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="index.html">← Back to Portfolio</a></li>
+									</ul>
+								</nav>
+						</div>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<!-- Project Header -->
+							<header class="project-header">
+								<h1 class="gradient-text">Gentle Browse Chrome Extension</h1>
+								<p class="project-subtitle">A fully functional Chrome extension I coded from scratch to provide sensory relief for users with autism, migraines, and sensory processing issues</p>
+								
+								<div class="project-meta">
+									<div class="meta-item">
+										<strong>Duration:</strong> 1 week
+									</div>
+									<div class="meta-item">
+										<strong>Role:</strong> Full-Stack Developer & UX Designer
+									</div>
+									<div class="meta-item">
+										<strong>Tools:</strong> JavaScript, HTML/CSS, Chrome Extension APIs, Figma
+									</div>
+									<div class="meta-item">
+										<strong>Code:</strong> <a href="https://github.com/jessielouise/gentle-browse" target="_blank">View on GitHub</a>
+									</div>
+								</div>
+								
+								<div class="project-tags">
+									<span class="tag">Accessibility</span>
+									<span class="tag">Chrome Extension</span>
+									<span class="tag">JavaScript Development</span>
+									<span class="tag">Sensory Design</span>
+								</div>
+							</header>
+
+							<!-- Main Project Image -->
+							<section class="hero-image">
+								<h2>The Extension Interface</h2>
+								<img src="images/gentlebrowse.png" alt="Gentle Browse Chrome Extension Interface" onclick="openModal(this)" />
+								<p><em>The clean, accessible interface I designed and coded for instant sensory relief</em></p>
+							</section>
+
+							<!-- Project Overview -->
+							<section class="project-section">
+								<h2>Project Overview</h2>
+								<p>After talking to friends who struggle with sensory overload while browsing, I realized there wasn't a good solution that addressed multiple sensory issues at once. So I built Gentle Browse a. Gentle Browse is a Chrome extension that I coded entirely from scratch to give users instant control over their browsing environment.</p>
+								
+								<h3>The Problem</h3>
+								<p>People with autism, migraines, dyslexia, and other sensory sensitivities face constant discomfort online. Bright colors, auto-playing videos, and hard-to-read fonts can turn simple web browsing into an exhausting experience. Most existing solutions only tackle one issue at a time.</p>
+								
+								<h3>My Solution</h3>
+								<p>A comprehensive Chrome extension that I developed to address multiple sensory needs simultaneously. Users can soften colors, switch to dyslexia-friendly fonts, mute autoplay media, add color overlays, and dim brightness. All of these tasks can be completed with simple toggles in an accessible interface.</p>
+							</section>
+
+							<!-- User Research -->
+							<section class="project-section">
+								<h2>User Research & Insights</h2>
+								
+								<h3>What Users Told Me</h3>
+								<div class="quote-section">
+									<blockquote>
+										"The dyslexia font makes a big difference but I haven't found any good plugins for that recently."
+									</blockquote>
+									
+									<blockquote>
+										"My sensory issues attack with migraines and anxiety; I just started working a very corporate standard 9-5 and staring at a computer screen for 8+ hours while wearing blue light glasses is driving me insane. Like even putting the brightness at the lowest is still not enough UGH"
+									</blockquote>
+									
+									<blockquote>
+										"I don't often experience overstimulation online but when I do get irritated it is usually from automatic start videos or audio. Like trying to locate something and having audio playing about whatever nonsense that makes it hard to focus on what I am looking for"
+									</blockquote>
+								</div>
+								
+								<h3>Key Insights</h3>
+								<ul>
+									<li>Users need multiple accessibility features, not just one</li>
+									<li>Autoplay media is a major source of frustration and distraction</li>
+									<li>Even minimal screen brightness can be too intense for some users</li>
+									<li>Dyslexia-friendly fonts are in demand but hard to find</li>
+									<li>Corporate workers especially need sensory relief during long screen sessions</li>
+								</ul>
+							</section>
+
+							<!-- Technical Features -->
+							<section class="project-section">
+								<h2>Features I Built</h2>
+								
+								<div class="features-grid">
+									<div class="feature-item">
+										<h4>Soften Colors</h4>
+										<p>Reduces color saturation across web pages to minimize visual intensity and strain</p>
+									</div>
+									
+									<div class="feature-item">
+										<h4>Dyslexia-Friendly Font</h4>
+										<p>Instantly switches to OpenDyslexic font designed specifically for easier reading</p>
+									</div>
+									
+									<div class="feature-item">
+										<h4>Mute Autoplay Media</h4>
+										<p>Prevents videos and audio from auto-playing and mutes them by default</p>
+									</div>
+									
+									<div class="feature-item">
+										<h4>Color Overlay</h4>
+										<p>Adds customizable color tints to dim and soften the entire screen</p>
+									</div>
+									
+									<div class="feature-item">
+										<h4>Dim Brightness</h4>
+										<p>Lowers overall page brightness for reduced glare and eye strain</p>
+									</div>
+									
+									<div class="feature-item">
+										<h4>Quick Enable All</h4>
+										<p>One-click activation of all calming features for instant relief</p>
+									</div>
+								</div>
+							</section>
+
+							<!-- Development Process -->
+							<section class="project-section">
+								<h2>Development Process</h2>
+								
+								<div class="process-steps">
+									<div class="process-step">
+										<h4>1. User Research & Problem Definition</h4>
+										<p>Interviewed users with sensory sensitivities to understand their pain points and existing workarounds</p>
+									</div>
+									
+									<div class="process-step">
+										<h4>2. Feature Planning</h4>
+										<p>Prioritized features based on user feedback and researched Chrome Extension capabilities</p>
+									</div>
+									
+									<div class="process-step">
+										<h4>3. Technical Architecture</h4>
+										<p>Designed the extension structure using manifest v3, content scripts, and popup interface</p>
+									</div>
+									
+									<div class="process-step">
+										<h4>4. Core Development</h4>
+										<p>Coded the JavaScript functionality, CSS injection, and media control</p>
+									</div>
+									
+									<div class="process-step">
+										<h4>5. UI/UX Design & Implementation</h4>
+										<p>Created an accessible, intuitive interface that users can operate even during sensory overload</p>
+									</div>
+									
+									<div class="process-step">
+										<h4>6. Testing & Iteration</h4>
+										<p>Tested across different websites and browsers, gathering feedback from target users</p>
+									</div>
+								</div>
+							</section>
+
+							<!-- Technical Implementation -->
+							<section class="project-section">
+								<h2>Technical Implementation</h2>
+								
+								<h3>Key Technologies</h3>
+								<ul>
+									<li><strong>JavaScript:</strong> Core functionality and DOM manipulation</li>
+									<li><strong>Chrome Extension API:</strong> Browser integration and permissions</li>
+									<li><strong>CSS Injection:</strong> Dynamic styling and visual modifications</li>
+									<li><strong>Content Scripts:</strong> Page-level modifications and media control</li>
+									<li><strong>Local Storage:</strong> User preference persistence</li>
+								</ul>
+								
+								<h3>Development Challenges</h3>
+								<div class="insights-grid">
+									<div class="insight-item">
+										<h4>Cross-Site Compatibility</h4>
+										<p>Ensuring the extension works reliably across different websites with varying CSS structures</p>
+									</div>
+									
+									<div class="insight-item">
+										<h4>Performance Optimization</h4>
+										<p>Minimizing impact on page load times while providing real-time visual modifications</p>
+									</div>
+									
+									<div class="insight-item">
+										<h4>Accessibility Focus</h4>
+										<p>Designing for users who may be experiencing sensory overload when they need to use the extension</p>
+									</div>
+									
+									<div class="insight-item">
+										<h4>Chrome API Limitations</h4>
+										<p>Working within browser security constraints while maximizing functionality</p>
+									</div>
+								</div>
+							</section>
+
+							<!-- Impact & Results -->
+							<section class="project-section">
+								<h2>Impact & Results</h2>
+								
+								<h3>User Feedback</h3>
+								<ul>
+									<li>Users reported immediate relief from sensory overload during browsing</li>
+									<li>The combination of features addressed more needs than single-purpose extensions</li>
+									<li>Corporate workers appreciated being able to customize their work browsing environment</li>
+									<li>The quick enable feature became the most-used function for instant relief</li>
+								</ul>
+								
+								<h3>Technical Achievements</h3>
+								<ul>
+									<li>Successfully developed a fully functional Chrome extension from scratch</li>
+									<li>Implemented real-time DOM manipulation without performance degradation</li>
+									<li>Created an accessible UI that works during sensory distress</li>
+									<li>Built persistent user preferences across browsing sessions</li>
+								</ul>
+								
+								<h3>What I Learned</h3>
+								<p>This project taught me that coding for accessibility isn't just about following guidelines - it's about understanding how people actually experience distress and building solutions that work in those moments. The technical challenge of manipulating web pages in real-time while maintaining performance was incredibly rewarding to solve.</p>
+								
+								<h3>Future Enhancements</h3>
+								<p>I'm planning to add website-specific presets, scheduled activation (like during work hours), and integration with system-level accessibility settings. I'd also love to expand beyond Chrome to other browsers.</p>
+							</section>
+
+							<!-- Navigation -->
+							<section class="project-navigation">
+								<a href="game-controller.html" class="nav-link prev">
+									<span class="nav-label">Previous Project</span>
+									<span class="nav-title">← Game Controller Redesign</span>
+								</a>
+								<a href="youtube-analytics.html" class="nav-link next">
+									<span class="nav-label">Next Project</span>
+									<span class="nav-title">YouTube Analytics UI →</span>
+								</a>
+							</section>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; 2025 Jessie Harris. All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Image Modal -->
+		<div id="imageModal" class="modal" onclick="closeModal()">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="modalImage">
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+			<script>
+				// Image modal functionality
+				function openModal(img) {
+					var modal = document.getElementById("imageModal");
+					var modalImg = document.getElementById("modalImage");
+					
+					// Preload the image to prevent flashing
+					modalImg.src = img.src;
+					modalImg.onload = function() {
+						document.body.classList.add("modal-open");
+						modal.classList.add("show");
+					};
+				}
+
+				function closeModal() {
+					var modal = document.getElementById("imageModal");
+					modal.classList.remove("show");
+					document.body.classList.remove("modal-open");
+				}
+			</script>
+
+	</body>
+</html>
